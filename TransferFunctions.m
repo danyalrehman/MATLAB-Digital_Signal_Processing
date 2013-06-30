@@ -13,10 +13,12 @@ Gout = minreal(G);
 subplot(1,2,1);
 impulse(Gout, 7); %can use impulse(sys, tfin) where tfin is the time finished
 % instead of tfin can also use a time vector
+title('Impulse Reaction');
 xlabel('Time');
 ylabel('Laplace Displacement');
 
 subplot(1,2,2);
 step(Gout, 7);
+title('Step Reaction');
 xlabel('Time');
 ylabel('Laplace Displacement');
