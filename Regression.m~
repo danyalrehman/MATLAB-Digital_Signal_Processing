@@ -1,6 +1,5 @@
 % Regression Analysis - Polynomial Interpolation
 
-% any randon (x,y) points that were chosen
 x = [1 3 5 7 9 11 13 15];
 y = [2 11 22 35 47 54 70 96];
 
