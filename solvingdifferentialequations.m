@@ -22,15 +22,18 @@ F = 2*(h^2)*f(t);
 
 X = zeros(n,n);
 
+% sets the values of the first two and last two elements in the matrix
 X(1,1) = -4;
 X(1,2) = 2 - h;
 X(n,n-1) = 2 + h;
 X(n,n) = -4;
 
+% loop triangulates and fills out values in the matrix
 for i = 2 : n - 1 
     X(i,i-1:i+1) = [2+h -4 2-h];
 end
 
+% calculates inverse and then plots the solution
 Y = X \ F;
 plot(t,Y);
 xlabel('Time (s)');
